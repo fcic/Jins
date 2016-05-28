@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
+	<title>cube</title>
+	<style type="text/css">
+		*{margin: 0;padding: 0;}
+		#cube figure{
+	        color: white;
+	        border:2px solid black;
+	        position: absolute;
+	        width: 196px;
+	        height: 196px;
+		}
+		#cube div{
+			font-size: 20px;
+	        line-height: 96px;
+	        font-weight: bold;
+	        color: black;
+	        text-align: center;
+	        border:2px solid black;
+	        position: absolute;
+	        width: 96px;
+	        height: 96px;
+	        left: 50px;
+	        top: 50px;
+		}
+
+	    .front  { background: hsla(  300, 100%, 50%, 0.5 ); z-index: 6;}
+	    .back   { background: hsla(  240, 100%, 50%, 0.5 ); z-index: 5;}
+	    .right  { background: hsla( 180, 100%, 50%, 0.5 ); z-index: 4;}
+	    .left  { background: hsla( 120, 100%, 50%, 0.5 ); z-index: 3;}
+	    .top    { background: hsla( 60, 100%, 50%, 0.5 ); z-index: 2;}
+	    .bottom { background: hsla( 0, 100%, 50%, 0.5 ); z-index: 1;}
+
+	    .front1  { background: hsla(  300, 100%, 50%, 0.5 ); z-index: 6;}
+	    .back1   { background: hsla(  240, 100%, 50%, 0.5 ); z-index: 5;}
+	    .right1  { background: hsla( 180, 100%, 50%, 0.5 ); z-index: 4;}
+	    .left1   { background: hsla( 120, 100%, 50%, 0.5 ); z-index: 3;}
+	    .top1    { background: hsla( 60, 100%, 50%, 0.5 ); z-index: 2;}
+	    .bottom1 { background: hsla( 0, 100%, 50%, 0.5 ); z-index: 1;}
+	    @keyframes go{
+	    	0% {transform: rotate3d(0,0,0,150deg);}
+	    	20% {transform: rotate3d(1,0,1,160deg);}
+	    	40% {transform: rotate3d(1,1,1,120deg);}
+	    	45% {transform: rotate3d(1,1,1,150deg);}
+	    	50% {transform: rotate3d(1,1,1,120deg);}
+	    	55% {transform: rotate3d(1,1,1,200deg);}
+	    	60% {transform: rotate3d(1,0,1,180deg);}
+	    	80% {transform: rotate3d(1,1,0,170deg) scale(0.5,0.5) skew(70deg);}
+	    	100% {transform: rotate3d(1,1,1,36deg) scale(2,2) skew(30deg);}
+	    }
+	    .container{
+	        width: 200px;
+	        height: 200px;
+	        margin: 200px auto;
+	        perspective:800px;
+	        perspective-origin: -220px -275px;
+   		}
+   		#cube{
+	        width: 100%;
+	        height: 100%;
+	        transform-style:preserve-3d;
+	        position: relative;
+  		}
+  		#cube:hover{animation: go 5s ease 0s infinite alternate;}
+		#cube:hover .front{transform:rotateY(0deg) translateZ(100px);}
+	    #cube:hover .back{transform:rotateX(360deg) translateZ(-100px);}
+	    #cube:hover .right{ transform:rotateY(270deg) translateZ(100px);}
+	    #cube:hover .left{transform:rotateY(-270deg) translateZ(100px);}
+	    #cube:hover .top{transform:rotateX(270deg) translateZ(100px);}
+	    #cube:hover .bottom{transform:rotateX(-270deg) translateZ(100px);}
+
+	    #cube:hover .front1{transform:rotateY(0deg) translateZ(50px);}
+	    #cube:hover .back1{transform:rotateX(-180deg) translateZ(50px);}
+	    #cube:hover .right1{ transform:rotateY(90deg) translateZ(50px);}
+	    #cube:hover .left1{transform:rotateY(-90deg) translateZ(50px);}
+	    #cube:hover .top1{transform:rotateX(90deg) translateZ(50px);}
+	    #cube:hover .bottom1{transform:rotateX(-90deg) translateZ(50px);}
+	    #cube figure{transition:all 3s ;}
+	    #cube div{transition:all 3s;}
+	</style>
+</head>
+<body>
+	<section class="container">
+    <div id="cube">
+        <figure class="front"></figure>
+        <figure class="back"></figure>
+        <figure class="right"></figure>
+        <figure class="left"></figure>
+        <figure class="top"></figure>
+        <figure class="bottom"></figure>
+        <div class="front1">小盒子</div>
+        <div class="back1"></div>
+        <div class="right1"></div>
+        <div class="left1"></div>
+        <div class="top1"></div>
+        <div class="bottom1"></div>
+    </div>
+</section>
+</body>
+</html>
