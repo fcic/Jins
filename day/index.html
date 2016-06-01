@@ -54,7 +54,7 @@
 			<div class="swiper-slide"><img data-src="38.jpg" class="swiper-lazy"></div>
 			<div class="swiper-slide"><img data-src="39.jpg" class="swiper-lazy"></div>
     </div>
-			<div id="title">1 Day ↑</div>
+			<div id="title">1 Day ↑上滑</div>
     </div>
     <script>
      var jins =new Swiper('.swiper-container',{
@@ -68,7 +68,7 @@
 		lazyLoadingOnTransitionStart : true,
 		onSlideChangeStart:function(swiper){
 			var title = document.querySelector("#title");
-			title.innerHTML=jins.activeIndex+1+" Day ↑";
+			title.innerHTML=jins.activeIndex+1+" Day";
 		}
      });
     </script>
