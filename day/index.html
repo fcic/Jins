@@ -34,7 +34,7 @@
 		lazyLoadingOnTransitionStart : true,
 		onSlideChangeStart:function(swiper){
 			var title = document.querySelector("#title");
-			title.innerHTML=jins.activeIndex+1+" Day ↑";
+			title.innerHTML=jins.activeIndex+1+" Day";
 			if (appendNumber<=38) {
 				swiper.appendSlide('<div class="swiper-slide"><img data-src="'+appendNumber+'.jpg" class="swiper-lazy"></div>');
 				appendNumber++;
