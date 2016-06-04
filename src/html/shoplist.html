@@ -9,15 +9,15 @@
 	<link rel="stylesheet" type="text/css" href="../css/shoplist.css">
 	<script type="text/javascript" src="../common/zepto.js"></script>
 	<script>
-		var html = document.getElementsByTagName("html")[0];
-			var width = $(window).width();
-	 		 width = window.screen.width/640;
-	 		html.style.fontSize = 32*width+"px";
-		window.onresize=onload=function(){
+		window.onresize=function(){
+			rem();
+		}
+		rem();
+		function rem (){
 			var html = document.getElementsByTagName("html")[0];
 			var width = $(window).width();
-	 		 width = window.screen.width/640;
-	 		html.style.fontSize = 32*width+"px";
+		 	width = window.screen.width/640;
+		 	html.style.fontSize = 32*width+"px";
 		}
 	</script>
 </head>
