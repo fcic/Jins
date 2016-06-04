@@ -7,10 +7,12 @@
 	<link rel="stylesheet" type="text/css" href="../common/toprem.css">
 	<link rel="stylesheet" type="text/css" href="../common/bottomrem.css">
 	<link rel="stylesheet" type="text/css" href="../css/shoplist.css">
+	<script type="text/javascript" src="../common/zepto.js"></script>
 	<script>
 		window.onresize=onload=function(){
 			var html = document.getElementsByTagName("html")[0];
-	 		var width = window.screen.width/640;
+			var width = $(window).width();
+	 		 width = window.screen.width/640;
 	 		html.style.fontSize = 32*width+"px";
 		}
 	</script>
@@ -159,7 +161,6 @@
 
 
 
-	<script type="text/javascript" src="../common/zepto.js"></script>
 	<script type="text/javascript" src="../js/shoplist.js"></script>
 </body>
 </html>
