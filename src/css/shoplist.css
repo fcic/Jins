@@ -1,0 +1,9 @@
+body{background-color: #f3f4f6;}
+.top-temp{height:5.625rem; }
+.bottom-temp{height: 6.125rem;width: 40.0rem;float: left;margin-top: 1.25rem;}
+.main{box-sizing: border-box;width: 40.0rem;}
+.item{margin: 2.1875rem;margin-bottom: 0;width:15.625rem;height:20.625rem;float: left;}
+.item dt img{width: 15.0rem;padding: 0.125rem;border:1px solid #eee;box-shadow: 0 0.0625rem 0.3125rem 0 #333;height: 15.0rem;}
+.item p {width: 100%;text-align: center;font-size: 1.375rem;}
+.item span{color: red;font-size: 1.375rem;}
+.item s{font-size: 1.375rem;color: #aaa;margin-left: 6.25rem;}
