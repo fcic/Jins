@@ -51,13 +51,11 @@ var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
    
 var selectBtn=document.getElementById("selectBtn");  
 selectBtn.onclick=function(){  
-    if(isAndroid==true){  
-//          window.location.href="https://appsto.re/cn/Hogzbb.i";  
+    if(isAndroid==true){
 			alert("Android版APP正在开发中，敬请期待")
-    }else if(isiOS==true){ 
-    	//window.location.href="https://wwww.baidu.com"
-          window.location.href="https://appsto.re/cn/Hogzbb.i";  
-    }  
+    }else{
+    		this.href="https://appsto.re/cn/Hogzbb.i";
+ 	}  
 }  
 		</script>
 	</body>
