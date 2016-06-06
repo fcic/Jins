@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta content="width=device-width, initial-scale=1.0,
+		maximum-scale=1.0,minmun-scanle=1.0, user-scalable=0"  name="viewport"/>
+		<title>BiBiCAR</title>
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<!--header-->
+		<header>
+			<h1>www.bibicar.cn</h1>
+		</header>
+		
+		<!--section主体部分-->
+		<section>
+			<div class="logo">
+				<span></span>
+			</div>
+			<div class="font">
+					<b>二手车 / 测评 / 社交</b>
+					<p>
+							BIBI二手车是集海量二手车，
+							专业测评，以及社交于一体的生活类APP，
+							让用户既能找到合适的二手车，又能认识到朋友。
+					</p>
+			</div>
+			<div class="appstore">
+				<a id="selectBtn" href="">
+					<div>
+						<b>点击进入</b>
+						<b>APP&nbsp;STORE</b>
+						<b>下载</b>
+					</div>
+				</a>
+			</div>
+			<div class="car">
+				<span></span>
+			</div>
+		</section>
+		
+		<!--footer脚部-->
+		<footer>
+			<p></p>
+		</footer>
+		<script>
+var u = navigator.userAgent, app = navigator.appVersion;  
+var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器  
+var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端  
+   
+var selectBtn=document.getElementById("selectBtn");  
+selectBtn.onclick=function(){  
+    if(isAndroid==true){  
+//          window.location.href="https://appsto.re/cn/Hogzbb.i";  
+			alert("Android版APP正在开发中，敬请期待")
+    }else if(isiOS==true){ 
+    	//window.location.href="https://wwww.baidu.com"
+          window.location.href="https://appsto.re/cn/Hogzbb.i";  
+    }  
+}  
+		</script>
+	</body>
+</html>
