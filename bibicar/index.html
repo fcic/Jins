@@ -53,13 +53,13 @@ var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android�
    
 var selectBtn=document.getElementById("selectBtn");  
 selectBtn.onclick=function(){  
-   //  if(isAndroid==true){
-			// alert("Android版APP正在开发中，敬请期待")
-   //  		return false;
-   //  }else 
-   if(isWeiXin()){
+    if(isAndroid==true){
+			alert("Android版APP正在开发中，敬请期待")
+    		return false;
+    }else if(isWeiXin()){
     	var tip = document.getElementById("tip");
     	tip.style.display="block";
+    	return false;
     }
 }  
 
