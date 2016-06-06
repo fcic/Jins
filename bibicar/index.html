@@ -27,7 +27,7 @@
 					</p>
 			</div>
 			<div class="appstore">
-				<a id="selectBtn" href="https://itunes.apple.com/cn/app/bibi-car/id1097098145?l=en&mt=8">
+				<a id="selectBtn" href="https://appsto.re/cn/Hogzbb.i">
 					<div>
 						<b>点击进入</b>
 						<b>APP&nbsp;STORE</b>
@@ -44,17 +44,33 @@
 		<footer>
 			<p></p>
 		</footer>
+		<div id="tip" style="width:2rem;height:1rem;background-color:#333;margin:auto;left:0;top:0;right:0;bottom:0;position:absolute;box-shadow:0 0 0 10000px rgba(0,0,0,.8);border-radius:20px;box-sizing:border-box;padding:0.1rem;display:none;">
+			<p style="font-size:0.18rem;color:#1ce6d0;">请点击右上角的按钮，在Safari中打开，进行下载...</p>
+		</div>
 		<script>
 var u = navigator.userAgent, app = navigator.appVersion;  
 var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
    
 var selectBtn=document.getElementById("selectBtn");  
 selectBtn.onclick=function(){  
-    if(isAndroid==true){
-			alert("Android版APP正在开发中，敬请期待")
-    		return false;
-    } 
+   //  if(isAndroid==true){
+			// alert("Android版APP正在开发中，敬请期待")
+   //  		return false;
+   //  }else 
+   if(isWeiXin()){
+    	var tip = document.getElementById("tip");
+    	tip.style.display="block";
+    }
 }  
+
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
 		</script>
 	</body>
 </html>
