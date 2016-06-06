@@ -44,9 +44,9 @@
 		<footer>
 			<p></p>
 		</footer>
-		<div id="tip" style="width:2rem;height:1rem;background-color:#333;margin:auto;left:0;top:0;right:0;bottom:0;position:absolute;box-shadow:0 0 0 10000px rgba(0,0,0,.8);border-radius:20px;box-sizing:border-box;padding:0.1rem;display:none;">
+		<!-- <div id="tip" style="width:2rem;height:1rem;background-color:#333;margin:auto;left:0;top:0;right:0;bottom:0;position:absolute;box-shadow:0 0 0 10000px rgba(0,0,0,.8);border-radius:20px;box-sizing:border-box;padding:0.1rem;display:none;">
 			<p style="font-size:0.18rem;color:#1ce6d0;">请点击右上角的按钮，在Safari中打开，进行下载...</p>
-		</div>
+		</div> -->
 		<script>
 var u = navigator.userAgent, app = navigator.appVersion;  
 var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
@@ -56,9 +56,19 @@ selectBtn.onclick=function(){
     	if(isAndroid==true){
 			alert("Android版APP正在开发中，敬请期待")
     		return false;
+    	}else if(isWeiXin()){
+    		alert("请点击右上角的按钮，在Safari中打开，进行下载...");
     	}
     	
 }  
+function isWeiXin(){
+    var ua = window.navigator.userAgent.toLowerCase();
+    if(ua.match(/MicroMessenger/i) == 'micromessenger'){
+        return true;
+    }else{
+        return false;
+    }
+}
 		</script>
 	</body>
 </html>
