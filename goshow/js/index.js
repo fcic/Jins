@@ -9,7 +9,6 @@ window.onload=function(){
 		type:"get",
 		success:function(data){
 			var index =  data.indexOf("(");
-			console.log(data);
 			 data = data.substring(index+1,data.length-1);
 			 data = JSON.parse(data);
 			 var temp = "";
