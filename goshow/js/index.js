@@ -13,9 +13,9 @@ window.onload = function () {
             $("section").html("");
             $("section").append(data);
             swi();
+			initItemList();
         }
     })
-    initItemList();
  
     function initItemList() {
         $.ajax({
