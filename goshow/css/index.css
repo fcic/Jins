@@ -36,4 +36,4 @@ h1{font-size: 1rem;text-align: center;font-family: fantasy;color: lightpink;lett
 footer{position: relative;height: 0.96rem;width: 100%;position: fixed;left: 0;bottom: 0;background-color: #474950;border-top:1px solid #ababab;}
 .menu{width: 1.28rem;height: 9.6rem;float: left;text-align: center;display: block;padding-top:0.1rem;}
 .menu p{color: #fff;font-size: 0.24rem;}
-.active-menu{width:1.28rem;height: 0.05rem;background-color:#e4376a;position: absolute;display: block;top: 0;left: 0;transition: all 0.4s cubic-bezier(.13,.76,.5,1.27);}
+.active-menu{width:1.28rem;height: 0.05rem;background-color:#e4376a;position: absolute;display: block;top: 0;left: 0;transition: all 0.4s cubic-bezier(.88,1.81,.73,.75);}
