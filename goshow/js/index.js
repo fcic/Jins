@@ -15,9 +15,9 @@ window.onload = function () {
             swi();
         }
     })
-    init();
+    initItemList();
  
-    function init() {
+    function initItemList() {
         $.ajax({
             url: "http://datainfo.duapp.com/shopdata/getGoods.php",
             type: "get",
@@ -47,15 +47,63 @@ window.onload = function () {
             url: "html/home.html",
             type: "get",
             success: function (data) {
- 
-                $("section").html("");
-                $("section").append(data);
+            	var section = $("section");
+                section.html("");
+               	section.append(data);
+               	section.attr("data-check","home")
                 swi();
-                init();
+                initItemList();
             }
         })
     }
- 
+    function ajaxClassfy() {
+        $.ajax({
+            url: "html/classfy.html",
+            type: "get",
+            success: function (data) {
+               var section =  $("section");
+                section.html("");
+               	section.append(data);
+               	section.attr("data-check","classfy")
+            }
+        })
+    }
+	function ajaxShopcar() {
+        $.ajax({
+            url: "html/shopcar.html",
+            type: "get",
+            success: function (data) {
+               var section =  $("section");
+                section.html("");
+               	section.append(data);
+               	section.attr("data-check","shopcar");
+               }
+        })
+    } 
+    function ajaxMyshow() {
+        $.ajax({
+            url: "html/myshow.html",
+            type: "get",
+            success: function (data) {
+               var section =  $("section");
+                section.html("");
+               	section.append(data);
+               	section.attr("data-check","myshow")
+               }
+        })
+    } 
+    function ajaxMore() {
+        $.ajax({
+            url: "html/more.html",
+            type: "get",
+            success: function (data) {
+               var section =  $("section");
+                section.html("");
+               	section.append(data);
+               	section.attr("data-check","more")
+            }
+        })
+    } 
  
     ;
     (function () {
@@ -66,28 +114,39 @@ window.onload = function () {
         var shopcar = "<h1>This is shopcar!</h1>";
         var myshow = "<h1>This is myshow!</h1>";
         var more = "<h1>This is more!</h1>";
+        var section = $("section");
         footer.on("click", "a", function () {
             var route = $(this).attr("data-route");
             switch (route) {
             case "home":
                 active.css("left", "0");
-                ajaxHome();
+                if(!(section.attr("data-check")==route)){
+                	ajaxHome();
+                }
                 break;
             case "classfy":
                 active.css("left", "20%");
-                $("section").html(classfy);
+                if(!(section.attr("data-check")==route)){
+                ajaxClassfy();
+                }
                 break;
             case "shopcar":
                 active.css("left", "40%");
-                $("section").html(shopcar);
+                if(!(section.attr("data-check")==route)){
+                ajaxShopcar();
+                }
                 break;
             case "myshow":
                 active.css("left", "60%");
-                $("section").html(myshow);
+                if(!(section.attr("data-check")==route)){
+                ajaxMyshow();
+                }
                 break;
             case "more":
                 active.css("left", "80%");
-                $("section").html(more);
+                if(!(section.attr("data-check")==route)){
+                ajaxMore();
+                }
                 break;
             }
         })
