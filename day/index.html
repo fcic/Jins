@@ -18,11 +18,15 @@
 			<div class="swiper-slide"><img data-src="2.jpg" class="swiper-lazy"></div>
 			<div class="swiper-slide"><img data-src="3.jpg" class="swiper-lazy"></div>
 			<div class="swiper-slide"><img data-src="4.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="5.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="6.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="7.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="8.jpg" class="swiper-lazy"></div>
     </div>
 			<div id="title">1 Day ↑ 滑动</div>
     </div>
     <script>
-    var appendNumber = 5
+    var appendNumber = 9
      var jins =new Swiper('.swiper-container',{
      	direction:'vertical',
      	loop:false,
@@ -30,7 +34,7 @@
      	effect:"cube",
      	lazyLoading : true,
 		lazyLoadingInPrevNext : true,
-		lazyLoadingInPrevNextAmount : 3,
+		lazyLoadingInPrevNextAmount : 8,
 		lazyLoadingOnTransitionStart : true,
 		onSlideChangeEnd:function(swiper){
 			var title = document.querySelector("#title");
