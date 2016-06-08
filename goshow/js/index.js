@@ -120,30 +120,40 @@ window.onload = function () {
             switch (route) {
             case "home":
                 active.css("left", "0");
+                a.removeClass("menu-color");
+                $(this).addClass("menu-color");
                 if(!(section.attr("data-check")==route)){
                 	ajaxHome();
                 }
                 break;
             case "classfy":
                 active.css("left", "20%");
+                a.removeClass("menu-color");
+                $(this).addClass("menu-color");
                 if(!(section.attr("data-check")==route)){
                 ajaxClassfy();
                 }
                 break;
             case "shopcar":
                 active.css("left", "40%");
+                a.removeClass("menu-color");
+                $(this).addClass("menu-color");
                 if(!(section.attr("data-check")==route)){
                 ajaxShopcar();
                 }
                 break;
             case "myshow":
                 active.css("left", "60%");
+                a.removeClass("menu-color");
+                $(this).addClass("menu-color");
                 if(!(section.attr("data-check")==route)){
                 ajaxMyshow();
                 }
                 break;
             case "more":
                 active.css("left", "80%");
+                a.removeClass("menu-color");
+                $(this).addClass("menu-color");
                 if(!(section.attr("data-check")==route)){
                 ajaxMore();
                 }

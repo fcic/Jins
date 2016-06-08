@@ -30,6 +30,8 @@ h1{font-size: 1rem;text-align: center;font-family: fantasy;color: lightpink;lett
 .discount{font-size: 0.3rem;}
 .item-right{float: left;overflow: hidden;width: 1.3rem;height: 0.8rem;}
 .icon{width: 1.2rem;height: 0.6rem;border-radius: 0.20rem;background-image: -webkit-linear-gradient(top,#f46b90,#d91653);margin-top: 0.2rem;line-height: 0.6rem;text-align: center;display: block;}
+.menu-color p{color: #e4376a!important;}
+.menu-color i{color: #e4376a;}
 .temp{height: 0.96rem;width: 100%;border-top:1px solid #ababab;}
 footer{position: relative;height: 0.96rem;width: 100%;position: fixed;left: 0;bottom: 0;background-color: #474950;border-top:1px solid #ababab;}
 .menu{width: 1.28rem;height: 9.6rem;float: left;text-align: center;display: block;padding-top:0.1rem;}
