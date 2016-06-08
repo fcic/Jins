@@ -13,7 +13,7 @@ window.onload = function () {
             $("section").html("");
             $("section").append(data);
             swi();
-			initItemList();
+            initItemList();
         }
     })
  
@@ -37,75 +37,24 @@ window.onload = function () {
                 $(".item-group").append(temp);
             }
         });
- 
- 
- 
     }
  
-    function ajaxHome() {
+    function getAhax(url, check, home) {
         $.ajax({
-            url: "html/home.html",
+            url: url,
             type: "get",
             success: function (data) {
-            	var section = $("section");
+                var section = $("section");
                 section.html("");
-               	section.append(data);
-               	section.attr("data-check","home")
-                swi();
-                initItemList();
+                section.append(data);
+                section.attr("data-check", check);
+                if (!home == undefined || !home == null || !home == "") {
+                    swi();
+                    initItemList();
+                }
             }
         })
-    }
-    function ajaxClassfy() {
-        $.ajax({
-            url: "html/classfy.html",
-            type: "get",
-            success: function (data) {
-               var section =  $("section");
-                section.html("");
-               	section.append(data);
-               	section.attr("data-check","classfy")
-            }
-        })
-    }
-	function ajaxShopcar() {
-        $.ajax({
-            url: "html/shopcar.html",
-            type: "get",
-            success: function (data) {
-               var section =  $("section");
-                section.html("");
-               	section.append(data);
-               	section.attr("data-check","shopcar");
-               }
-        })
-    } 
-    function ajaxMyshow() {
-        $.ajax({
-            url: "html/myshow.html",
-            type: "get",
-            success: function (data) {
-               var section =  $("section");
-                section.html("");
-               	section.append(data);
-               	section.attr("data-check","myshow")
-               }
-        })
-    } 
-    function ajaxMore() {
-        $.ajax({
-            url: "html/more.html",
-            type: "get",
-            success: function (data) {
-               var section =  $("section");
-                section.html("");
-               	section.append(data);
-               	section.attr("data-check","more")
-            }
-        })
-    } 
- 
-    ;
+    };
     (function () {
         var footer = $("footer");
         var a = $(".menu");
@@ -122,40 +71,40 @@ window.onload = function () {
                 active.css("left", "0");
                 a.removeClass("menu-color");
                 $(this).addClass("menu-color");
-                if(!(section.attr("data-check")==route)){
-                	ajaxHome();
+                if (!(section.attr("data-check") == route)) {
+                    getAhax("html/home.html", "home", 1);
                 }
                 break;
             case "classfy":
                 active.css("left", "20%");
                 a.removeClass("menu-color");
                 $(this).addClass("menu-color");
-                if(!(section.attr("data-check")==route)){
-                ajaxClassfy();
+                if (!(section.attr("data-check") == route)) {
+                    getAhax("html/classfy.html", "classfy");
                 }
                 break;
             case "shopcar":
                 active.css("left", "40%");
                 a.removeClass("menu-color");
                 $(this).addClass("menu-color");
-                if(!(section.attr("data-check")==route)){
-                ajaxShopcar();
+                if (!(section.attr("data-check") == route)) {
+                    getAhax("html/shopcar.html", "shopcar");
                 }
                 break;
             case "myshow":
                 active.css("left", "60%");
                 a.removeClass("menu-color");
                 $(this).addClass("menu-color");
-                if(!(section.attr("data-check")==route)){
-                ajaxMyshow();
+                if (!(section.attr("data-check") == route)) {
+                    getAhax("html/myshow.html", "myshow");
                 }
                 break;
             case "more":
                 active.css("left", "80%");
                 a.removeClass("menu-color");
                 $(this).addClass("menu-color");
-                if(!(section.attr("data-check")==route)){
-                ajaxMore();
+                if (!(section.attr("data-check") == route)) {
+                    getAhax("html/more.html", "more");
                 }
                 break;
             }
