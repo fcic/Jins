@@ -1,4 +1,26 @@
 window.onload = function () {
+    
+    function init(){
+    	var ls = window.localStorage.getItem("currentPage"); 
+    	$.ajax({
+        url: "html/"+ls+".html",
+        type: "get",
+        success: function (data) {
+            $("section").html("");
+            $("section").append(data);
+            if (ls=="home") {
+            	swi();
+           		initItemList();
+            }
+            var active = $(".menu[data-route="+ls+"]");
+            active.addClass("menu-color");
+            var span = $(".active-menu");
+            span.css("left",active.attr("data-left"));
+            $("section").attr("data-check",ls);
+        }
+    })
+    }
+    init();
     function swi() {
         var mySwiper = new Swiper('.swiper-container', {
             autoplay: 3000,
@@ -6,17 +28,6 @@ window.onload = function () {
             autoplayDisableOnInteraction: false,
         })
     }
-    $.ajax({
-        url: "html/home.html",
-        type: "get",
-        success: function (data) {
-            $("section").html("");
-            $("section").append(data);
-            swi();
-            initItemList();
-        }
-    })
- 
     function initItemList() {
         $.ajax({
             url: "http://datainfo.duapp.com/shopdata/getGoods.php",
@@ -48,6 +59,7 @@ window.onload = function () {
                 section.html("");
                 section.append(data);
                 section.attr("data-check", check);
+                saveCurrentPage(check);
                 if (!home == undefined || !home == null || !home == "") {
                     swi();
                     initItemList();
@@ -55,7 +67,11 @@ window.onload = function () {
             }
         })
     };
-    (function () {
+    function saveCurrentPage(node){
+    	window.localStorage.setItem("currentPage",node);
+    }
+
+    ;(function () {
         var footer = $("footer");
         var a = $(".menu");
         var active = $(".active-menu");
