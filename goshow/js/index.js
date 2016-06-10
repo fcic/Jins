@@ -1,14 +1,14 @@
 window.onload = function () {
     
     function init(){
-    	var ls = window.localStorage.getItem("currentPage"); 
+    	var ls = window.localStorage.getItem("currentPage")?window.localStorage.getItem("currentPage"):"home"; 
     	$.ajax({
         url: "html/"+ls+".html",
         type: "get",
         success: function (data) {
             $("section").html("");
             $("section").append(data);
-            if (ls=="home"||ls==null||typeof ls ==undefined) {
+            if (ls=="home") {
             	swi();
            		initItemList();
             }
