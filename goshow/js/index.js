@@ -8,7 +8,7 @@ window.onload = function () {
         success: function (data) {
             $("section").html("");
             $("section").append(data);
-            if (ls=="home") {
+            if (ls=="home"||ls==null||typeof ls ==undefined) {
             	swi();
            		initItemList();
             }
