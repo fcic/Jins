@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		城市：省份：<select></select>市/区<select></select>县/区<select></select>
+		<script src="zepto.min.js"></script>
+		<script>
+			var select = $("select");
+			$.get("./city.json", function (data) {
+			 
+			    //初始化
+			 
+			    var s1 = "";
+			    var s2 = "";
+			    var s3 = "";
+			    for (var i = 0; i < data.length; i++) {
+			        s1 += "<option>" + data[i].name + "</option>";
+			    }
+			    var sel1 = select.eq(0);
+			    var sel2 = select.eq(1);
+			    var sel3 = select.eq(2);
+			    sel1.append(s1);
+			 
+			    //select1选择
+			 
+			    sel1.on("change", function () {
+			        var s1val = sel1.val();
+			        for (var i = 0; i < data.length; i++) {
+			            if (data[i].name == s1val) {
+			                for (var j = 0; j < data[i].sub.length; j++) {
+			                    s2 += "<option>" + data[i].sub[j].name + "</option>";
+			                }
+			            }
+			        }
+			        sel2.html("");
+			        sel3.html("");
+			        sel2.append(s2);
+			        s2 = "";
+			    })
+			 
+			    //select2选择
+			 
+			    sel2.on("change", function () {
+			        var s1val = sel1.val();
+			        var s2val = sel2.val();
+			        for (var i = 0; i < data.length; i++) {
+			            if (data[i].name == s1val) {
+			                for (var j = 0; j < data[i].sub.length; j++) {
+			                    if (data[i].sub[j].name == s2val && data[i].sub[j].sub) {
+			                        for (var k = 0; k < data[i].sub[j].sub.length; k++) {
+			                            s3 += "<option>" + data[i].sub[j].sub[k].name + "</option>";
+			                        }
+			                    }
+			                }
+			            }
+			        }
+			        sel3.html("");
+			        sel3.append(s3);
+			        s3 = "";
+			    })
+			 
+			})
+		</script>
+	</body>
+
+</html>
