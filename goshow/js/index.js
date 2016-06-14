@@ -38,7 +38,7 @@ window.onload = function () {
                 data = JSON.parse(data);
                 var temp = "";
                 for (var i = 0; i < data.length; i++) {
-                    temp += '<div class="item">' + '<img src="' + data[i].goodsListImg + '" class="item-img">' +
+                    temp += '<div class="item">' + '<img src="' + data[i].goodsListImg + '" class="item-img"/>' +
                         '<div class="item-info">' + '<p class="item-title">' + data[i].goodsName + '</p>' +
                         '<div class="item-left">' + '<p><span>￥' + data[i].price +
                         '</span><span><del>￥secret</del></span></p>' + '<span class="discount">' + data[i].discount +
