@@ -1,0 +1,25 @@
+.HomeMain{width: 690px;padding: 20px 30px;overflow: hidden;}
+.HomeMain *{font-weight: 600;}
+.HomeMain a{display: block;}
+.mainLeft,.mainRight{width:338px;float: left;}
+.mainLeft{margin-right: 13px;}
+.invide{width:338px;height: 174px;background-color: #fff;margin-bottom: 20px;}
+.prize{width:338px;height:312px;background-color:#fff;padding-top: 45px;text-align:center}
+.money{width:338px;height:328px;background-color:#fff;margin-bottom: 20px;text-align: center;padding-top:30px;}
+.data{width:338px;height:174px;background-color:#fff;}
+.invide div{float:left;}
+.invideLeft img{margin-top: 35px;margin-left: 40px;}
+.invideLeft{margin-right:15px;}
+.invideRight p:nth-child(1){font-size: 30px;margin-top: 35px;}
+.invideRight p:nth-child(2){font-size: 45px;color: #ffa53c;}
+.invideRight p:nth-child(2) span{font-size: 30px;}
+.prizeLeft p:nth-child(1){font-size:30px;}
+.prizeLeft p:nth-child(2){font-size:35px;color:#6bd2f5;}
+.moneyLeft p:nth-child(1){font-size:30px;}
+.moneyLeft p:nth-child(2){font-size:35px;color:#fe4542;}
+.data div{float:left;}
+.dataLeft img{margin-top: 35px;margin-left: 30px;}
+.dataLeft{margin-right:15px;}
+.dataRight p:nth-child(1){font-size: 30px;margin-top: 35px;}
+.dataRight p:nth-child(2){font-size: 45px;color: #1fe1af;}
+.dataRight p:nth-child(2) span{font-size: 30px;}

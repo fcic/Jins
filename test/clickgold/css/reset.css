@@ -1,0 +1,5 @@
+html,body{height100%;width100%;background-color: #eeeeee;}
+*{margin: 0;padding: 0;color: #333333;font-family: 'Microsoft yahei';}
+a{color:#333;text-decoration: none;font-family: 'Microsoft yahei';}
+ul,ol{list-style: none;}
+.empty{width:750px;height:91px;}
