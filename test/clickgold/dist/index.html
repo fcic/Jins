@@ -5,25 +5,22 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 	<title>点金手</title>
 	<script type="text/javascript" src="../lib/adaptVP.js"></script>
+	<script type="text/javascript" src="../lib/react.min.js"></script>
+	<script type="text/javascript" src="../lib/react-dom.min.js"></script>
 	<script type="text/javascript" src="../lib/sea.js"></script>
 	<script type="text/javascript" src="../lib/seajs-css.js"></script>
 	<script type="text/javascript">
 		seajs.config({
 		  base: "../",
 		  alias: {
-		    'react':'lib/react.min.js',
-		    'react-dom':'lib/react-dom.min.js',
 		    'swiper':'lib/swiper-3.3.1.min.js',
 		    'zepto':'lib/zepto.min.js'
 		  }
 		});
 		// 加载入口模块
-		seajs.use("react");
 		seajs.use("zepto");
 		seajs.use("swiper");
-		seajs.use("react-dom",function(){
-			seajs.use("./js/Layout.js");
-		});
+		seajs.use("./js/Layout.js");
 	</script>
 </head>
 <body>
