@@ -21,8 +21,9 @@
 		seajs.use("react");
 		seajs.use("zepto");
 		seajs.use("swiper");
-		seajs.use("react-dom");
-		seajs.use("./js/Layout.js");
+		seajs.use("react-dom",function(){
+			seajs.use("./js/Layout.js");
+		});
 	</script>
 </head>
 <body>
