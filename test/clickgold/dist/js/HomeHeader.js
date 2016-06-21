@@ -1,6 +1,7 @@
 define(function(require, exports, module) {
   require('../css/HomeHeader.css');
   var LoginLayout = require('./LoginLayout');
+  var SignupLayout = require('./SignupLayout');
   var HomeHeader = React.createClass({displayName: "HomeHeader",
   	render:function(){
   		return(
@@ -20,7 +21,8 @@ define(function(require, exports, module) {
         var className = $(this).prop('className');
         switch(className){
           case 'signup': 
-          console.log(1);
+          ReactDOM.unmountComponentAtNode(document.body);
+          ReactDOM.render(React.createElement(SignupLayout, null),document.body);
           break;
           case 'login':
           ReactDOM.unmountComponentAtNode(document.body);
