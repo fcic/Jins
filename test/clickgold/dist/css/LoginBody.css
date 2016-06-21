@@ -1,0 +1,5 @@
+.LoginBody{width: 690px;padding: 80px 30px;}
+.LoginBody input{font-size: 25px;width:690px;height: 67px;display: block;border: 0;margin-top: 30px;}
+.loginButton{display:block;border:1px solid #ffc600;width:688;height:67px;background-color: #ffda44;font-size:28px;text-align: center;line-height: 67px;margin-top:30px;}
+.LoginBody p{color: #999;margin-top:30px;font-size:25px;text-align:center;}
+.LoginBody p span{margin: 0 20px;}

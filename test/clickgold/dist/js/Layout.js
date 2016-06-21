@@ -19,4 +19,5 @@ define(function(require, exports, module) {
   });
 
 	ReactDOM.render(React.createElement(Layout, null),document.body);
+  module.exports=Layout;
 });
