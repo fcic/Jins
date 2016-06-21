@@ -14,14 +14,14 @@
 <body>
 	<div class="swiper-container" style="width:200px;height:350px;">
     <div class="swiper-wrapper">
-        	<div class="swiper-slide"><img data-src="1.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="2.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="3.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="4.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="5.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="6.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="7.jpg" class="swiper-lazy"></div>
-			<div class="swiper-slide"><img data-src="8.jpg" class="swiper-lazy"></div>
+        	<div class="swiper-slide"><img data-src="./img/1.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/2.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/3.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/4.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/5.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/6.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/7.jpg" class="swiper-lazy"></div>
+			<div class="swiper-slide"><img data-src="./img/8.jpg" class="swiper-lazy"></div>
     </div>
 			<div id="title">1 Day ↑ 滑动</div>
     </div>
@@ -40,7 +40,7 @@
 			var title = document.querySelector("#title");
 			title.innerHTML=jins.activeIndex+1+" Day";
 			if (appendNumber<=46) {
-				swiper.appendSlide('<div class="swiper-slide"><img data-src="'+appendNumber+'.jpg" class="swiper-lazy"></div>');
+				swiper.appendSlide('<div class="swiper-slide"><img data-src=./img/"'+appendNumber+'.jpg" class="swiper-lazy"></div>');
 				appendNumber++;
 			}
 		}
