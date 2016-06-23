@@ -10,7 +10,17 @@ define(function(require, exports, module) {
             React.createElement("p", null, React.createElement("b", null, "忘记密码"), React.createElement("span", null, "|"), React.createElement("b", null, "快速注册"))
   				)
   		)
-  	}
+  	},
+    componentDidMount:function(){
+        $('.loginButton').on('tap',function(e){
+          var Layout = require('./Layout');
+          ReactDOM.unmountComponentAtNode(document.body);
+          ReactDOM.render(React.createElement(Layout, null),document.body);
+          $('#HomeHeader').html("");
+          var LoginAfterHomeHeader = require('./LoginAfterHomeHeader');
+          ReactDOM.render(React.createElement(LoginAfterHomeHeader, null), $('#HomeHeader')[0]);
+        })
+    }
   });
 module.exports=LoginBody;
 });

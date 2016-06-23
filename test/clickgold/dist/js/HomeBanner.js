@@ -9,6 +9,13 @@ define(function(require, exports, module) {
           autoplayDisableOnInteraction:false
         })      
     },
+    componentUpdate:function(){
+        var mySwiper = new Swiper ('.swiper-container', {
+          autoplay: 2000,
+          pagination: '.swiper-pagination',
+          autoplayDisableOnInteraction:false
+        })      
+    },
   	render:function(){
   		return(
   				React.createElement("div", {className: "HomeBanner"}, 

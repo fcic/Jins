@@ -25,7 +25,6 @@ define(function(require, exports, module) {
   	},
     componentDidMount:function(){
       $('#HomeFooter a').on('click',function(e){
-        console.log($(this).prop("className"));
       })
     }
   });

@@ -9,3 +9,4 @@
 .SignupBody .selectSign a:nth-child(2){margin-left: 85px;}
 .SignupBody .selectSign a span{display:block;float: left;margin-top:5px;}
 .SignupBody .selectSign a img{display:block;float: left;}
+.SignupBody .signupTip{color:red;display:none;}
