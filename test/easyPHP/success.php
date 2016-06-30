@@ -9,10 +9,10 @@
 		$name = $_POST["username"];
 		$pwd = $_POST["pwd"];
 		$fp = fopen("./data.txt", "a");
-		$str = "user:".$name."&password:".$pwd."\n";
+		$str = "user:".$name."&password:".$pwd."\r\n";
 		fwrite($fp,$str);
 		fclose($fp);
-		echo "<h1>欢迎回来,".$name."！<h1>";
+		echo "<h1>欢迎回来,".$name."！</h1>";
 	?>
 </body>
 </html>
