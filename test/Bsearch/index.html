@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>模仿关键字搜索</title>
+		<script type="text/javascript" src="js/jquery-2.1.0.js" ></script>
+	</head>
+	<body>
+		<input type="text" onkeyup="require()" id="search"/>
+		<div id="show"></div>
+		<script>
+		function require(){
+			var search = $("#search").val();
+			var _url = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+search+'&json=1&p=3&sid=20144_1467_19033_20515_18240_17949_20388_20456_18133_17001_15202_11615&req=2&csor=2&pwd=s&cb=jQuery110207612423721154653_1467355506619&_=1467355506623';
+			$.ajax({
+				type:"get",
+				url:_url,
+				async:true,
+				dataType:'jsonp',
+				jsonpCallback:'jQuery110207612423721154653_1467355506619',
+				success:function(data){
+					console.log(data);
+					var list = data.s;
+					var str ="";
+					for(var i in list){
+						str+='<p>'+list[i]+'</p>';
+					}
+					$("#show").html(str);
+				}
+			});
+		}
+			
+		</script>
+	</body>
+</html>
