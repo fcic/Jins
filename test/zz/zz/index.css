@@ -1,0 +1,26 @@
+/* ::::: http://js.51jobcdn.com/in/css/style.css?20160330 ::::: */
+
+html, body { margin: 0px; padding: 0px; height: 100%; }
+form, ul, li, p, h1, h2, h3, h4, h5, h6 { margin: 0px; padding: 0px; }
+img { border: 0px none; }
+a:link { font-size: 12px; color: rgb(51, 51, 51); text-decoration: none; font-family: "宋体"; }
+a:visited { font-size: 12px; color: rgb(126, 129, 126); text-decoration: none; font-family: "宋体"; }
+a:hover { font-size: 12px; color: rgb(255, 115, 0); text-decoration: none; font-family: "宋体"; }
+a.blue1:link { font-size: 12px; color: rgb(19, 129, 163); text-decoration: none; }
+a.blue1:visited { font-size: 12px; color: rgb(19, 129, 163); text-decoration: none; }
+a.blue1:hover { font-size: 12px; color: rgb(19, 129, 163); text-decoration: underline; }
+/* ::::: http://js.51jobcdn.com/in/css/cv.css?20091117 ::::: */
+
+/* ::::: http://js.51jobcdn.com/in/css/jobs/panel-pop.css?20160329 ::::: */
+
+table { font-size: 14px; line-height: 150%; font-family: Arial,Helvetica,sans-serif,"宋体",tahoma,Srial,helvetica,sans-serif; }
+td { font-size: 14px; line-height: 200%; font-family: Arial,Helvetica,sans-serif,"宋体",tahoma,Srial,helvetica,sans-serif; word-break: break-all; }
+P { font-size: 14px; line-height: 150%; font-family: Arial,Helvetica,sans-serif,"宋体",tahoma,Srial,helvetica,sans-serif; margin: 0px; }
+A:link { color: rgb(41, 110, 187); text-decoration: none; }
+A:visited { color: black; text-decoration: none; }
+.blue1 { color: rgb(255, 116, 0); }
+.blue1 { color: rgb(37, 111, 184); }
+.titleLineB { border-bottom: 4px solid rgb(37, 111, 184); height: 32px; line-height: 32px; margin: 0px; padding: 0px; }
+.titleLineR { border-bottom: 4px solid rgb(203, 205, 204); height: 32px; line-height: 32px; margin: 0px; padding: 0px; }
+.traitLabel { background-color: rgb(255, 223, 193); color: rgb(90, 90, 90); border: 1px solid rgb(240, 240, 240); font-size: 12px; padding: 2px 6px; height: 22px; line-height: 22px; margin-right: 6px; display: inline-block; }
+.TextinTable { line-height: 32px; word-break: break-all; }
