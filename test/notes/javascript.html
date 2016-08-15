@@ -19,7 +19,7 @@
 		<li><p>1.typeof产生的结果只有6种:'number','string','boolean','undefined','function'和'object';如果运算数是一个数组或null,产生的结果仍然是object;</p></li>
 		<li><p>2.运算符&&的第一个运算数的值为false,则不判断第二个运算数;运算符||的第一个运算数的值为true,则不判断第二个运算数;</p></li>
 		<li>
-			<p>3.检索一个undefined值会导致TypeError异常，可以用&&避免错误;</p>
+			<p>3.检索一个undefined值会导致TypeError异常,可以用&&避免错误;</p>
 				<code>
 					<p>People.someone ==>//undefined</p>
 					<p>People.someone.sex ==>//throw "TypeError"</p>
@@ -29,6 +29,10 @@
 		</li>
 		<li><p>4.对象通过引用来传递,永远不会被拷贝;</p></li>
 		<li><p>5.所谓编程,就是将一组需求分解成一组函数与数据结构的技能;</p></li>
+		<li>
+			<p>6.对函数的调用一共有四种调用模式:方法调用模式,函数调用模式,构造器调用模式,apply调用模式,每种模式在如何初始化关键参数this上存在差异;</p>
+			<p>方法调用模式:当一个函数被保存为对象的一个属性时,我们称它为方法.当一个方法被调用时,this被绑定到该对象.</p>
+		</li>
 	</ul>
 	<script type="text/javascript">
 		(function(){
