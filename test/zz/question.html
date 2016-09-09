@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">		
+	<meta charset="UTF-8">
+	<title>解决你的任何问题！</title>
+	<style type="text/css">
+		h1{color: red;}
+		label{color: blue;}
+		button{border: 3px solid green;background-color: transparent;color: red;font-weight: 800;}
+		input{border:3px solid orange;}
+	</style>
+</head>
+<body>
+	<h1>试试看吧！</h1>
+	<label for="que">输入困扰你的问题吧！</label><br/></br>
+	<input type="text" id="que"></br></br>
+	<button onclick="check()">发送问题</button>
+	<script type="text/javascript">
+		var check = function(){
+			var que = document.getElementById('que').value;
+			if (que==''||que==undefined||que==null||que=='undefined') {
+				alert('你别不写你的困扰啊！');
+			}else{
+				window.location.href='http://baidu.apphb.com/?q='+que;
+			}
+		}
+	</script>
+</body>
+</html>
